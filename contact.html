@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountlake Laundromat - Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS sidebar */
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 0;
+      background-color: #333333;
+      color: #FFFFFF;
+      font-size: 24px;
+      padding-top: 40px;
+      word-spacing: 11px;
+      z-index: 9999;
+      transition: width 0.3s;
+      overflow-y: auto;
+    }
+
+    .sidebar.open {
+      width: 300px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: #ffffff;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+    }
+
+    /* CSS */
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F0F0F0;
+      color: #333333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+    }
+
+    .logo {
+      width: 250px;
+    }
+
+    @media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    }
+    }
+      
+    .navigation-button {
+      color: black;
+      font-size: 40px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+
+    .navigation-button:hover {
+      color: #333333;
+    }
+
+    footer {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      height: 80px;
+    }
+
+    .section {
+      background-color: #F0F0F0;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .section h2 {
+      font-weight: bold;
+      color: #333333;
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .section p {
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .contact-info h2 {
+      font-weight: bold;
+      color: #333333;
+      margin-top: 0;
+      text-align: left;
+      font-size: 24px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+    }
+
+    .contact-form button {
+      background-color: #FFFFFF;
+      color: #333333;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .contact-form button:hover {
+      background-color: #333333;
+      color: #FFFFFF;
+    }
+
+    .review-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .review-buttons a {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #FFFFFF;
+      background-color: #333333;
+      border-radius: 4px;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .review-buttons a:hover {
+      background-color: #555555;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        width: 150px;
+      }
+
+      .contact-info,
+      .contact-form {
+        max-width: 80%;
+        margin: 20px auto;
+        text-align: left; 
+      }
+
+      .contact-info h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+  <script>
+    /* JS */
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
+</head>
+<body>
+<header>
+  <a href="index.html">
+    <img src="mlt.jpeg" alt="MLT Logo" class="logo">
+  </a>
+  <button class="navigation-button" onclick="toggleSidebar()">&#9776;</button>
+</header>
+
+  <div class="sidebar" id="sidebar">
+    <button class="close-button" onclick="toggleSidebar()">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="payment.html">Amenities</a></li>
+      <li><a href="commercial.html">Wash & Fold</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="contact-info">
+      <h2>Contact Information:</h2>
+      <p>Phone: 425-971-1515</p>
+      <p>Email: <a href="mailto:mltlaundry@gmail.com" style="text-decoration:none; color:inherit;">mltlaundry@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="https://formsubmit.co/jasleenksaini@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" style="font-family: 'Times New Roman', Times, serif;">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Leave us a Review</h2>
+    <div class="review-buttons">
+      <a href="https://www.yelp.com/biz/mountlake-laundromat-mountlake-terrace-2#reviews">Yelp</a>
+      <a href="https://www.google.com/search?q=mountlake+laundromat%2C+22803+44th+ave+w+unit+b2%2C+mountlake+terrace%2C+wa+98043&oq=moun&aqs=chrome.0.69i59j46i39i175i199i650j69i59j69i57j69i60l2j69i61j69i60.1746j0j9&sourceid=chrome&ie=UTF-8#ip=1&lrd=0x5490115e0374a7b3:0xe60cee603b8da5fe,3,,,">Google Business</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Mountlake Laundromat</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+

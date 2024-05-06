@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountlake Laundromat - Commercial Laundry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS sidebar */
+    body {
+      margin: 0;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 0;
+      background-color: #333333;
+      color: #FFFFFF;
+      font-family: "Times New Roman", Times, serif;
+      transition: width 0.3s;
+      overflow-y: auto;
+      font-size: 24px;
+      padding-top: 40px;
+      word-spacing: 11px;
+      z-index: 9999;
+    }
+
+    .sidebar.open {
+      width: 300px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: #FFFFFF;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+    }
+
+    /* CSS */
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F0F0F0;
+      color: #333333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+    }
+
+    .logo {
+      width: 250px;
+    }
+
+    @media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    }
+    }
+      
+    .navigation-button {
+      color: black;
+      font-size: 40px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+  
+    .centered-title {
+      text-align: center;
+    }
+
+    .navigation-button:hover {
+      color: #333333;
+    }
+
+    footer {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      height: 80px;
+    }
+
+    .image-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+    }
+
+    .content-section {
+      background-color: #F8F8F8;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .content-section p {
+      margin-bottom: 10px;
+    }
+
+    .form-button {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #FFFFFF;
+      background-color: #333333;
+      border-radius: 4px;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      margin: 0 auto;
+    }
+
+    .form-button:hover {
+      background-color: #222222;
+    }
+  </style>
+  <script>
+    /* JS */
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
+</head>
+<body>
+<header>
+  <a href="index.html">
+    <img src="mlt.jpeg" alt="MLT Logo" class="logo">
+  </a>
+  <button class="navigation-button" onclick="toggleSidebar()">&#9776;</button>
+</header>
+
+  <div class="sidebar" id="sidebar">
+    <button class="close-button" onclick="toggleSidebar()">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="payment.html">Amenities</a></li>
+      <li><a href="commercial.html">Wash & Fold</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="image-section">
+    <img src="outside.jpeg" alt="Commercial Laundry Image">
+  </div>
+
+  <div class="content-section">
+    <h2>Wash & Fold Services</h2>
+    <p>Commercial laundry services are offered to nearby clinics, chiropractic offices, and event centers.</p>
+    <p>For more information, please fill out the form below:</p>
+    <a href="https://docs.google.com/forms/d/17MZfAkm0A4UNzG33faP0rryUt892FT8pMAangzrtD7M/edit" class="form-button">Services Form</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Mountlake Laundromat</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

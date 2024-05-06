@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountlake Laundromat - Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS sidebar */
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 0;
+      background-color: #333333;
+      color: #FFFFFF;
+      font-size: 24px;
+      padding-top: 40px;
+      word-spacing: 11px;
+      z-index: 9999;
+      transition: width 0.3s;
+      overflow-y: auto;
+    }
+
+    .sidebar.open {
+      width: 300px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: #ffffff;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+    }
+
+    /* CSS */
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F0F0F0;
+      color: #333333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+    }
+
+    .logo {
+      width: 250px;
+    }
+
+    @media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    }
+    }
+      
+    .navigation-button {
+      color: black;
+      font-size: 40px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+
+    .navigation-button:hover {
+      color: #333333;
+    }
+
+    footer {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      height: 80px;
+    }
+
+    .section {
+      background-color: #F0F0F0;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .gallery-image {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      margin: 10px;
+      border: 2px solid black;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-image {
+        width: 200px;
+        height: 150px;
+      }
+    }
+
+    .gallery-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-section {
+        flex-direction: column;
+      }
+    }
+
+    }
+  </style>
+  <script>
+    /* JS */
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="mlt.jpeg" alt="MLT Logo" class="logo">
+    </a>
+    <button class="navigation-button" onclick="toggleSidebar()">&#9776;</button>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <button class="close-button" onclick="toggleSidebar()">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="payment.html">Amenities</a></li>
+      <li><a href="commercial.html">Wash & Fold</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+<div class="section">
+  <h2>Gallery</h2>
+  <div class="gallery-section">
+    <img class="gallery-image" src="front.jpeg" alt="Image 1">
+    <img class="gallery-image" src="outside2.jpeg" alt="Image 2">
+    <img class="gallery-image" src="general.jpeg" alt="Image 3">
+    <img class="gallery-image" src="washers.jpeg" alt="Image 4">
+    <img class="gallery-image" src="mega.jpeg" alt="Image 5">
+    <img class="gallery-image" src="medium.jpeg" alt="Image 6">
+    <img class="gallery-image" src="signs.jpeg" alt="Image 7">
+    <img class="gallery-image" src="soap.jpeg" alt="Image 8">
+    <img class="gallery-image" src="vending.jpeg" alt="Image 9">
+  </div>
+</div>
+
+  <footer>
+    <p>&copy; 2023 Mountlake Laundromat</p>
+  </footer>
+</body>
+
+
+
+
+
+

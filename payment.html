@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountlake Laundromat - Payment Options</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    /* CSS sidebar */
+    body {
+      margin: 0;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 0;
+      background-color: #333333;
+      color: #FFFFFF;
+      font-family: "Times New Roman", Times, serif;
+      transition: width 0.3s;
+      overflow-y: auto;
+      font-size: 24px;
+      padding-top: 40px; 
+      word-spacing: 11px;
+      z-index:9999;
+    }
+
+    .sidebar.open {
+      width: 300px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: #ffffff;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+    }
+      
+    /* CSS */
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F0F0F0;
+      color: #333333;
+      margin: 0;
+    }
+    
+    header {
+      background-color: #FFFFFF;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      width: 97%;
+    }
+        
+    .logo {
+      width: 250px;
+    }
+    
+    @media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    }
+    }
+    
+        
+        
+  .navigation-button {
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: transparent; 
+    border: none; 
+    outline: none; 
+    padding: 10px; 
+    transition: color 0.3s;
+  }
+ 
+  .centered-title {
+  text-align: center;
+}
+
+  .navigation-button:hover {
+    color: #333333;
+    }
+    
+    footer {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      height: 80px;
+      width: 97%;
+    }
+    
+    .section {
+      background-color: #FFFFFF;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section h2 {
+      font-weight: bold;
+      color: #333333;
+      margin-top: 0;
+    }
+    
+    .section p {
+      margin-bottom: 10px;
+    }
+    
+    .bold-text {
+      font-weight: bold;
+    }
+    
+    .image-section {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width: 97%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .image-text-box {
+      background-color: #FFFFFF; 
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      opacity: 0.8; 
+    }
+    
+    .image-text-box h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333333;
+      margin: 0;
+    }
+    
+
+  .payrange-section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  .payrange-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payrange-text {
+    margin-bottom: 20px;
+  }
+
+  .payrange-video {
+    max-width: 100%;
+  }
+
+  .payrange-video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+  }
+
+
+  </style>
+  <script>
+    /* JS */
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
+</head>
+<body>
+<header>
+  <a href="index.html">
+    <img src="mlt.jpeg" alt="MLT Logo" class="logo">
+  </a>
+  <button class="navigation-button" onclick="toggleSidebar()">&#9776;</button>
+</header>
+
+  <div class="sidebar" id="sidebar">
+    <button class="close-button" onclick="toggleSidebar()">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="payment.html">Amenities</a></li>
+      <li><a href="commercial.html">Wash & Fold</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+<div class="section image-section" style="background-image: url('amenities.jpeg');">
+  <div class="image-text-box">
+    <div class="centered-title">
+      <h2>Amenities</h2>
+    </div>
+    <div class="section-text">
+      <h3>Laundry Machines</h3>
+      <ul>
+        <li>Regular Load - 17 lb</li>
+        <li>Double Load - 22 lb</li>
+        <li>Triple Load - 30 lb</li>
+        <li>Giant Load - 45 lb</li>
+        <li>Mega Load - 60 lb</li>
+      </ul>
+      <h3>Payment</h3>
+      <ul>
+        <li><span class="bold-text">Coin payment</span> - Coin machines are available at the back of the facility</li>
+        <li><span class="bold-text">PayRange</span> - Digital payment through phone app is also available. See video below</li>
+      </ul>
+      <h3>Additional Services</h3>
+      <ul>
+        <li>One load soap, detergent, and dryer sheet boxes are offered through vending.</li>
+        <li>ATM is available next door at Sound Community Bank.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="section payrange-section">
+    <div class="payrange-text">
+      <h1>PayRange</h1>
+    </div>
+    <div class="payrange-video">
+      <iframe src="https://www.youtube.com/embed/PmA3F6F0KmA" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Mountlake Laundromat</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountlake Laundromat - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS sidebar */
+    body {
+      margin: 0;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 0;
+      background-color: #333333;
+      color: #FFFFFF;
+      font-family: "Times New Roman", Times, serif;
+      transition: width 0.3s;
+      overflow-y: auto;
+      font-size: 24px;
+      padding-top: 40px;
+      word-spacing: 11px;
+      z-index: 9999;
+    }
+
+    .sidebar.open {
+      width: 300px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: #ffffff;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+    }
+
+    /* CSS */
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F0F0F0;
+      color: #333333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      width: 97%;
+    }
+
+    .logo {
+      width: 250px;
+    }
+    
+    @media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    }
+    }
+
+    .navigation-button {
+      color: black;
+      font-size: 40px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+      transition: color 0.3s;
+    }
+
+    .navigation-button:hover {
+      color: #333333;
+    }
+
+    footer {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      height: 80px;
+      width: 97%;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    .section {
+      background-color: #FFFFFF;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      font-weight: bold;
+      color: #333333;
+      margin-top: 0;
+    }
+
+    .section p {
+      margin-bottom: 10px;
+    }
+
+    .bold-text {
+      font-weight: bold;
+    }
+
+    .image-section {
+      position: relative;
+      background-image: url("mltImage.jpeg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 97%;
+      height: 70vh; /* Adjust the height as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-text-box {
+      background-color: #FFFFFF;
+      opacity: 0.8;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .image-text-box h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333333;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        width: 150px;
+      }
+
+      .image-text-box {
+        max-width: 80%;
+      }
+
+      .image-text-box h1 {
+        font-size: 36px;
+      }
+
+      .section.image-section {
+        height: auto;
+        padding-top: 40px; /* Adjust as needed */
+        padding-bottom: 40px; /* Adjust as needed */
+      }
+    }
+  </style>
+  <script>
+    /* JS */
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html">
+        <img src="mlt.jpeg" alt="MLT Logo" class="logo">
+      </a>
+      <button class="navigation-button" onclick="toggleSidebar()">&#9776;</button>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <button class="close-button" onclick="toggleSidebar()">&times;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="payment.html">Amenities</a></li>
+        <li><a href="commercial.html">Wash/Fold</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="section image-section">
+      <div class="image-text-box">
+        <h2>Welcome to the Mountlake Laundromat</h2>
+        <p>Mountlake Laundromat provides a clean, convenient, and efficient environment where you can tackle your laundry needs. This location offers a range of washer and dryer sizes, as well as amenities that allow for a hassle-free experience. As an unattended self-service laundromat, we aim for customer satisfaction and cleanliness. Additionally, we provide premium wash and fold services for residential and commercial clients.</p>
+        <p class="bold-text">Address:</p>
+        <p>22803 44th Ave W Unit B2, Mountlake Terrace, WA 98043</p>
+        <p class="bold-text">Hours:</p>
+        <p>6AM - 10PM, Monday - Sunday</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Mountlake Laundromat</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
